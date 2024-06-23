@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi Lokasi TB</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5 mb-5">
+        <h1 class="text-center mb-4">Prediksi Lokasi TB</h1>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label for="gender">Jenis Kelamin:</label>
+                <select id="gender" name="gender" class="form-control" required>
+                    <option value="" disabled selected>Jenis Kelamin</option>
+                    <option value="0">Perempuan</option>
+                    <option value="1">Laki-laki</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ft">Foto Toraks:</label>
+                <select id="ft" name="ft" class="form-control" required>
+                    <option value="" disabled selected>Status</option>
+                    <option value="0">Negatif</option>
+                    <option value="1">Positif</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="hiv">Status HIV:</label>
+                <select id="hiv" name="hiv" class="form-control" required>
+                    <option value="" disabled selected>Status HIV</option>
+                    <option value="0">Negatif</option>
+                    <option value="1">Positif</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="diabet">Riwayat Diabetes:</label>
+                <select id="diabet" name="diabet" class="form-control" required>
+                    <option value="" disabled selected>Status</option>
+                    <option value="0">Tidak</option>
+                    <option value="1">Ya</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="tcm">Hasil TCM:</label>
+                <select id="tcm" name="tcm" class="form-control" required>
+                    <option value="" disabled selected>Status</option>
+                    <option value="0">Rif Sensitif</option>
+                    <option value="1">Negatif</option>
+                    <option value="2">Rif Resisten</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Prediksi</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Prediksi</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .alertbg {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5 mb-5">
+        <h1 class="text-center mb-4">Hasil Prediksi</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Detail Inputan</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Jenis Kelamin:</strong>{{ 'Laki-laki' if gender == 1 else 'Perempuan' }}</li>
+                    <li class="list-group-item"><strong>Foto Toraks:</strong> {{ 'Positif' if ft == 1 else 'Negatif' }}</li>
+                    <li class="list-group-item"><strong>Status HIV:</strong> {{ 'Positif' if hiv == 1 else 'Negatif' }}</li>
+                    <li class="list-group-item"><strong>Riwayat Diabetes:</strong> {{ 'Ya' if diabet == 1 else 'Tidak' }}</li>
+                    <li class="list-group-item">
+                        <strong>
+                            Hasil TCM:
+                        </strong>
+                        {% if tcm == 1 %}
+                            Negatif
+                        {% elif tcm == 2 %}
+                            Rif Resisten
+                        {% else %}
+                            Rif Sensitif
+                        {% endif %}
+                    </li>
+                </ul>
+                <div class="alert alertbg mt-4" role="alert">
+                    <h4 class="alert-heading">Hasil Prediksi:</h4>
+                    <p>{{ result }}</p>
+                </div>
+                <a href="/" class="btn btn-primary mt-3">Buat Prediksi Lain</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
